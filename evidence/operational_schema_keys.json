@@ -1,0 +1,14 @@
+[
+    {
+        "child_table": "messages",
+        "fk_column": "conversation_id",
+        "parent_table": "conversations",
+        "parent_key": "id"
+    },
+    {
+        "child_table": "feedback",
+        "fk_column": "message_id",
+        "parent_table": "messages",
+        "parent_key": "id"
+    }
+]
