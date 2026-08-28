@@ -1,0 +1,8 @@
+Business question (Meridian Bank, EVP Consumer Banking):
+"Which of our critical at-risk customers have a deposit maturing within the
+next 10 days, and how much annual revenue is at stake — so we can prioritize
+retention outreach before the money walks?"
+
+Answered from the governed synced data in Lakebase (app.open_atrisk JOIN
+app.customer_position), filtered to risk_band='critical' and days_to_maturity<=10,
+ranked by revenue_at_risk_usd.
