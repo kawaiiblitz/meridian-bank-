@@ -1,4 +1,6 @@
-*   69e2c75 (HEAD -> main, origin/main) Merge pull request #1 from kawaiiblitz/development
+* 0c13430 (HEAD -> main) docs(evidence): executed .ipynb notebooks for schema, writable tables, dev-branch-off-main
+* 476b178 (origin/main) chore(submission1): add execution transcripts, PR-merge evidence, dev-branch-off-main
+*   69e2c75 Merge pull request #1 from kawaiiblitz/development
 |\  
 | * 3fb010e (origin/development, development) docs(evidence): schema+writable execution transcripts + dev-branch-off-main in code
 |/  
