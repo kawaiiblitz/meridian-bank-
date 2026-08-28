@@ -1,0 +1,42 @@
+# Operational schema applied on branch development (2026-08-28T15:47:37Z)
+# Ran with: psql (echo-all mode shows each statement + its result)
+
+                               List of relations
+ Schema |        Name         |       Type        |           Owner            
+--------+---------------------+-------------------+----------------------------
+ app    | conversations       | table             | raquel.pena@databricks.com
+ app    | customer_position   | partitioned table | databricks_writer_16405
+ app    | feedback            | table             | raquel.pena@databricks.com
+ app    | messages            | table             | raquel.pena@databricks.com
+ app    | nba_recommendations | partitioned table | databricks_writer_16405
+ app    | open_atrisk         | partitioned table | databricks_writer_16405
+ app    | products            | partitioned table | databricks_writer_16405
+ app    | products_search     | table             | raquel.pena@databricks.com
+ app    | rm_actions          | table             | raquel.pena@databricks.com
+(9 rows)
+
+
+-- Foreign-key relationships (proves the related-tables model ran):
+SELECT tc.table_name AS child, kcu.column_name AS fk_col, ccu.table_name AS parent, ccu.column_name AS parent_key FROM information_schema.table_constraints tc JOIN information_schema.key_column_usage kcu ON tc.constraint_name=kcu.constraint_name JOIN information_schema.constraint_column_usage ccu ON ccu.constraint_name=tc.constraint_name WHERE tc.constraint_type='FOREIGN KEY' AND tc.table_schema='app';
+  child   |     fk_col      |    parent     | parent_key 
+----------+-----------------+---------------+------------
+ messages | conversation_id | conversations | id
+ feedback | message_id      | messages      | id
+(2 rows)
+
+
+-- Primary keys per table (proves keys modeled):
+SELECT tc.table_name, kcu.column_name FROM information_schema.table_constraints tc JOIN information_schema.key_column_usage kcu ON tc.constraint_name=kcu.constraint_name WHERE tc.constraint_type='PRIMARY KEY' AND tc.table_schema='app' ORDER BY 1;
+     table_name      | column_name 
+---------------------+-------------
+ conversations       | id
+ customer_position   | customer_id
+ feedback            | id
+ messages            | id
+ nba_recommendations | customer_id
+ open_atrisk         | customer_id
+ products            | product_id
+ products_search     | product_id
+ rm_actions          | id
+(9 rows)
+

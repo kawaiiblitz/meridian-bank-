@@ -1,0 +1,41 @@
+# Writable Postgres tables applied/executed on branch development (2026-08-28T15:48:00Z)
+# Writable app.* tables are plain tables (owner raquel), DISTINCT from the
+# read-only synced tables (partitioned, owner databricks_writer_16405).
+
+-- rm_actions is a writable table (relkind r), synced ones are p:
+SELECT relname, CASE relkind WHEN 'r' THEN 'writable table' WHEN 'p' THEN 'read-only synced (partitioned)' END AS kind FROM pg_class c JOIN pg_namespace n ON n.oid=c.relnamespace WHERE n.nspname='app' AND relkind IN ('r','p') ORDER BY relkind, relname;
+       relname       |              kind              
+---------------------+--------------------------------
+ customer_position   | read-only synced (partitioned)
+ nba_recommendations | read-only synced (partitioned)
+ open_atrisk         | read-only synced (partitioned)
+ products            | read-only synced (partitioned)
+ conversations       | writable table
+ feedback            | writable table
+ messages            | writable table
+ products_search     | writable table
+ rm_actions          | writable table
+(9 rows)
+
+
+-- PROOF it is writable: INSERT then DELETE a probe row (runs successfully):
+INSERT INTO app.rm_actions(id,customer_id,action_type,status,created_at) VALUES ('22222222-2222-2222-2222-222222222222','CUST-TEST','rm_outreach','proposed',now());
+INSERT 0 1
+SELECT count(*) AS rows_after_insert FROM app.rm_actions;
+ rows_after_insert 
+-------------------
+                 4
+(1 row)
+
+DELETE FROM app.rm_actions WHERE id='22222222-2222-2222-2222-222222222222';
+DELETE 1
+
+-- Current committed action rows (the app's write surface, populated):
+SELECT customer_id, action_type, status, approved_by FROM app.rm_actions ORDER BY created_at;
+ customer_id  |   action_type   |  status  |          approved_by          
+--------------+-----------------+----------+-------------------------------
+ CUST-0000214 | retention_offer | executed | maria.garcia@meridianbank.com
+ CUST-0001887 | cross_sell      | pending  | 
+ CUST-0000214 | retention_offer | approved | raquel.pena@databricks.com
+(3 rows)
+
