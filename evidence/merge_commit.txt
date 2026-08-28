@@ -1,0 +1,8 @@
+Merge commit: 60db06f3dfcc8630b09755ec2419291001f41eec
+Author: Raquel Peña <raquel.pena@databricks.com>
+Date: Fri Aug 28 09:39:00 2026 -0600
+
+Promote Build 1 v2: operational schema + forecasting branch + scale-to-zero
+
+Co-authored-by: Isaac <no-reply@databricks.com>
+

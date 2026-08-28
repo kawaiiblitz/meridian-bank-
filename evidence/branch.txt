@@ -1,0 +1,17 @@
+Branches (Lakebase project meridian-bank):
+  production   = clean/main environment (promote target)
+  development  = iteration branch off production (all Build 1 work happens here)
+  forecasting  = THROWAWAY branch off production (ttl 604800s / 7 days) for what-if scenarios
+
+Development branch off main — changes committed as versioned artifacts:
+  a0030f1  UC synced tables as code (DAB)
+  6577dc6  Lakebase Search hybrid (lakebase_bm25 + lakebase_ann)
+  5cc6a8e  writable rm_actions + REPLICA IDENTITY FULL -> reverse sync SCD2
+  6e67e89  agent change: index idx_rm_actions_customer_status
+  0a7201e  operational schema FKs + forecasting branch + scale-to-zero
+Promoted to main via merge commits e890079 and 60db06f (see git_history.txt).
+
+Branch creation captured in code: infra/branches_and_scale_to_zero.sh
+Scale-to-zero: every endpoint floored at 0.5 CU (see branches_and_endpoints.json).
+Both branch uses shown: development (iteration) + forecasting (throwaway what-if,
+see forecasting_result.json).
