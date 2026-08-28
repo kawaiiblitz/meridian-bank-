@@ -1,0 +1,8 @@
+Name: meridian-lakebase
+Target: dev
+Workspace:
+  Host: https://fevm-serverless-stable-tech-summit.cloud.databricks.com
+  User: raquel.pena@databricks.com
+  Path: /Workspace/Users/raquel.pena@databricks.com/.bundle/meridian-lakebase/dev
+
+Validation OK!

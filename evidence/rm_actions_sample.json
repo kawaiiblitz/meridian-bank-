@@ -1,0 +1,23 @@
+[
+    {
+        "customer_id": "CUST-0000214",
+        "action_type": "retention_offer",
+        "status": "executed",
+        "approved_by": "maria.garcia@meridianbank.com",
+        "created_at": "2026-08-28T13:35:10.764634+00:00"
+    },
+    {
+        "customer_id": "CUST-0001887",
+        "action_type": "cross_sell",
+        "status": "pending",
+        "approved_by": null,
+        "created_at": "2026-08-28T13:35:21.723877+00:00"
+    },
+    {
+        "customer_id": "CUST-0000214",
+        "action_type": "retention_offer",
+        "status": "approved",
+        "approved_by": "raquel.pena@databricks.com",
+        "created_at": "2026-08-28T14:06:36.800059+00:00"
+    }
+]

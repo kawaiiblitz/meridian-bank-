@@ -1,0 +1,26 @@
+[
+  {
+    "branch": "forecasting",
+    "endpoint": "primary",
+    "min_cu": 0.5,
+    "max_cu": 1,
+    "suspend_timeout": "86400s",
+    "state": "ACTIVE"
+  },
+  {
+    "branch": "development",
+    "endpoint": "primary",
+    "min_cu": 0.5,
+    "max_cu": 2,
+    "suspend_timeout": "86400s",
+    "state": "ACTIVE"
+  },
+  {
+    "branch": "production",
+    "endpoint": "primary",
+    "min_cu": 0.5,
+    "max_cu": 2,
+    "suspend_timeout": "86400s",
+    "state": "ACTIVE"
+  }
+]
