@@ -1,0 +1,9 @@
+*   e890079 (HEAD -> main) Promote Build 1 (Lakebase) from development to main
+|\  
+| * 6e67e89 (development) feat(agent-change): rm_actions queue index (development) + Build1 evidence
+| * bf32c5d docs(evidence): domain question + reverse-sync SCD2 sample
+| * 5cc6a8e feat(reverse-sync): writable rm_actions + REPLICA IDENTITY FULL -> wal2delta SCD2
+| * 6577dc6 feat(search): Lakebase Search hybrid (lakebase_bm25 + lakebase_ann) over products.description
+| * a0030f1 feat(lakebase): UC synced tables as code (DAB)
+|/  
+* dd635dd Initial commit: repo scaffold

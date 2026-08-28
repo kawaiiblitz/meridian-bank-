@@ -1,0 +1,3 @@
+Change authored on branch: development (commit 6e67e89, Co-authored-by: Isaac)
+Validation: idx_rm_actions_customer_status confirmed present on app.rm_actions.
+Promoted to main via merge commit e890079 (--no-ff). See git_history.txt.

@@ -1,0 +1,7 @@
+Natural-language query: "wealth advisory account for an affluent long-tenure customer"
+
+Hybrid Lakebase Search over app.products_search:
+  - Vector (lakebase_ann / pgvector cosine) on description_embedding
+    (query embedded via databricks-gte-large-en, 1024-dim)
+  - Full-text (lakebase_bm25 / tsvector) on description
+Ranked by vector cosine similarity; fulltext_match flags BM25 term hits.

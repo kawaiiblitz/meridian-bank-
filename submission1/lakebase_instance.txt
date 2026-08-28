@@ -1,0 +1,6 @@
+Lakebase project (instance): meridian-bank
+Branch: development   Endpoint: ep-holy-heart-d1cmf28a.database.us-west-2.cloud.databricks.com
+Database: databricks_postgres
+
+SELECT version();
+-> PostgreSQL 17.11 (32e7196) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0, 64-bit

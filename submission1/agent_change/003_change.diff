@@ -1,0 +1,21 @@
+commit 6e67e892e63ea402820d392f6a6f5d5cca80e3ef
+Author: Raquel Peña <raquel.pena@databricks.com>
+Date:   Fri Aug 28 09:07:28 2026 -0600
+
+    feat(agent-change): rm_actions queue index (development) + Build1 evidence
+    
+    Applied and validated on the development branch; promoted to main via merge.
+    
+    Co-authored-by: Isaac <no-reply@databricks.com>
+
+diff --git a/migrations/003_rm_actions_queue_index.sql b/migrations/003_rm_actions_queue_index.sql
+new file mode 100644
+index 0000000..a16f394
+--- /dev/null
++++ b/migrations/003_rm_actions_queue_index.sql
+@@ -0,0 +1,5 @@
++-- Migration 003 (agentic change) — index to speed the RM queue lookup
++-- (per-customer latest action by status). Applied on the development branch,
++-- validated, then promoted to main via merge.
++CREATE INDEX IF NOT EXISTS idx_rm_actions_customer_status
++    ON app.rm_actions (customer_id, status);

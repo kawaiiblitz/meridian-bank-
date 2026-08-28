@@ -1,0 +1,12 @@
+Development branch (off main): development
+
+Changes made on development (iterated, then promoted to main):
+  a0030f1  UC synced tables as code (DAB): customer_position, open_atrisk,
+           nba_recommendations, products  <- Gold tables (SNAPSHOT, read-only)
+  6577dc6  Lakebase Search hybrid: lakebase_bm25 + lakebase_ann over products.description
+  5cc6a8e  Writable app.rm_actions + REPLICA IDENTITY FULL -> reverse sync (wal2delta) SCD2
+  bf32c5d  Evidence: domain question + reverse-sync SCD2 sample
+  6e67e89  Agent change: index idx_rm_actions_customer_status on app.rm_actions
+
+Promoted to main via merge commit e890079 (git_history.txt).
+Lakebase branches: production (clean/main) + development (iteration).
