@@ -1,0 +1,25 @@
+# Git branch topology — development branched OFF main
+* development
+  main
+  remotes/origin/development
+  remotes/origin/main
+
+# Common ancestor of main and development (the point development was created off main):
+86dbed4 chore: sync evidence working copy + ignore zip artifact
+
+# Graph:
+* 86dbed4 (HEAD -> development, origin/main, main) chore: sync evidence working copy + ignore zip artifact
+* f369f9c chore(submission1): v2 with code artifacts (DAB, migrations, infra) + full evidence
+*   60db06f Promote Build 1 v2: operational schema + forecasting branch + scale-to-zero
+|\  
+| * 0a7201e (origin/development) feat(schema+branches): operational schema FKs + forecasting branch + scale-to-zero
+* | a15280a chore(submission1): Build 1 evidence bundle (8 deliverables)
+* | e890079 Promote Build 1 (Lakebase) from development to main
+|\| 
+| * 6e67e89 feat(agent-change): rm_actions queue index (development) + Build1 evidence
+| * bf32c5d docs(evidence): domain question + reverse-sync SCD2 sample
+| * 5cc6a8e feat(reverse-sync): writable rm_actions + REPLICA IDENTITY FULL -> wal2delta SCD2
+| * 6577dc6 feat(search): Lakebase Search hybrid (lakebase_bm25 + lakebase_ann) over products.description
+| * a0030f1 feat(lakebase): UC synced tables as code (DAB)
+|/  
+* dd635dd Initial commit: repo scaffold
