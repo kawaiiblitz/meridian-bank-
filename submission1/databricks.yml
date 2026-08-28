@@ -1,0 +1,54 @@
+# Meridian Bank — Lakebase Build 1 (as code)
+# Defines the governed Unity Catalog -> Lakebase synced tables as code
+# (requirement 1c: "define the sync as code with Databricks Asset Bundles
+# or Terraform, not UI-only"). Deploy with: databricks bundle deploy -t dev
+bundle:
+  name: meridian-lakebase
+
+# The 4 read-only synced tables that mirror the governed Gold tables into
+# Lakebase Postgres (schema app) for low-latency serving. SNAPSHOT policy:
+# a daily-snapshot position table does not need continuous CDC.
+resources:
+  synced_database_tables:
+    customer_position:
+      name: serverless_stable_tech_summit_catalog.app.customer_position
+      logical_database_name: databricks_postgres
+      spec:
+        source_table_full_name: serverless_stable_tech_summit_catalog.meridian_bank.gold_customer_position
+        primary_key_columns:
+          - customer_id
+        scheduling_policy: SNAPSHOT
+
+    open_atrisk:
+      name: serverless_stable_tech_summit_catalog.app.open_atrisk
+      logical_database_name: databricks_postgres
+      spec:
+        source_table_full_name: serverless_stable_tech_summit_catalog.meridian_bank.gold_open_atrisk
+        primary_key_columns:
+          - customer_id
+        scheduling_policy: SNAPSHOT
+
+    nba_recommendations:
+      name: serverless_stable_tech_summit_catalog.app.nba_recommendations
+      logical_database_name: databricks_postgres
+      spec:
+        source_table_full_name: serverless_stable_tech_summit_catalog.meridian_bank.gold_nba_recommendations
+        primary_key_columns:
+          - customer_id
+        scheduling_policy: SNAPSHOT
+
+    products:
+      name: serverless_stable_tech_summit_catalog.app.products
+      logical_database_name: databricks_postgres
+      spec:
+        source_table_full_name: serverless_stable_tech_summit_catalog.meridian_bank.products
+        primary_key_columns:
+          - product_id
+        scheduling_policy: SNAPSHOT
+
+targets:
+  dev:
+    mode: development
+    default: true
+    workspace:
+      host: https://fevm-serverless-stable-tech-summit.cloud.databricks.com

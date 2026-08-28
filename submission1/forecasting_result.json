@@ -1,0 +1,8 @@
+{
+    "branch": "forecasting (throwaway, ttl 7d)",
+    "scenario": "What-if: rate-match retention a clientes critical con CD venciendo <=10d",
+    "critical_customers": 55,
+    "total_revenue_at_risk_usd": 994619,
+    "assumed_retain_rate": 0.6,
+    "projected_revenue_saved_usd": 596772
+}
