@@ -1,0 +1,21 @@
+# Pull Request promotion into main (execution evidence)
+{
+    "baseRefName": "main",
+    "headRefName": "development",
+    "mergeCommit": {
+        "oid": "69e2c751283ee0d4cc0f53a42a150e61b51a9c3c"
+    },
+    "mergedAt": "2026-08-28T15:49:30Z",
+    "number": 1,
+    "state": "MERGED",
+    "title": "Promote Build 1: schema + writable execution evidence"
+}
+
+# Merge commits into main (git log --merges):
+69e2c75 Merge pull request #1 from kawaiiblitz/development
+60db06f Promote Build 1 v2: operational schema + forecasting branch + scale-to-zero
+e890079 Promote Build 1 (Lakebase) from development to main
+
+# The validated agent change (003) is now contained in main:
+  branch:   development
+  branch: * main

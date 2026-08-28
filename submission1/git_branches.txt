@@ -1,12 +1,18 @@
-*   69e2c75 (HEAD -> main, origin/main) Merge pull request #1 from kawaiiblitz/development
-|\  
-| * 3fb010e (origin/development, development) docs(evidence): schema+writable execution transcripts + dev-branch-off-main in code
-|/  
-* 86dbed4 chore: sync evidence working copy + ignore zip artifact
+# Git branch topology — development branched OFF main
+* development
+  main
+  remotes/origin/development
+  remotes/origin/main
+
+# Common ancestor of main and development (the point development was created off main):
+86dbed4 chore: sync evidence working copy + ignore zip artifact
+
+# Graph:
+* 86dbed4 (HEAD -> development, origin/main, main) chore: sync evidence working copy + ignore zip artifact
 * f369f9c chore(submission1): v2 with code artifacts (DAB, migrations, infra) + full evidence
 *   60db06f Promote Build 1 v2: operational schema + forecasting branch + scale-to-zero
 |\  
-| * 0a7201e feat(schema+branches): operational schema FKs + forecasting branch + scale-to-zero
+| * 0a7201e (origin/development) feat(schema+branches): operational schema FKs + forecasting branch + scale-to-zero
 * | a15280a chore(submission1): Build 1 evidence bundle (8 deliverables)
 * | e890079 Promote Build 1 (Lakebase) from development to main
 |\| 
