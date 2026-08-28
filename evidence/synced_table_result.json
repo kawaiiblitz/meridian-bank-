@@ -1,0 +1,82 @@
+[
+    {
+        "customer_id": "CUST-0004138",
+        "tier": "affluent",
+        "home_metro": "Philadelphia",
+        "risk_band": "critical",
+        "balance_at_risk_usd": 1245716,
+        "revenue_at_risk_usd": 31903
+    },
+    {
+        "customer_id": "CUST-0007505",
+        "tier": "affluent",
+        "home_metro": "Dallas",
+        "risk_band": "critical",
+        "balance_at_risk_usd": 1224857,
+        "revenue_at_risk_usd": 31141
+    },
+    {
+        "customer_id": "CUST-0005063",
+        "tier": "affluent",
+        "home_metro": "Miami",
+        "risk_band": "critical",
+        "balance_at_risk_usd": 1183570,
+        "revenue_at_risk_usd": 29909
+    },
+    {
+        "customer_id": "CUST-0001326",
+        "tier": "affluent",
+        "home_metro": "Chicago",
+        "risk_band": "critical",
+        "balance_at_risk_usd": 1180946,
+        "revenue_at_risk_usd": 30044
+    },
+    {
+        "customer_id": "CUST-0006136",
+        "tier": "affluent",
+        "home_metro": "Minneapolis",
+        "risk_band": "critical",
+        "balance_at_risk_usd": 1174293,
+        "revenue_at_risk_usd": 30077
+    },
+    {
+        "customer_id": "CUST-0000697",
+        "tier": "affluent",
+        "home_metro": "Atlanta",
+        "risk_band": "critical",
+        "balance_at_risk_usd": 1174157,
+        "revenue_at_risk_usd": 29674
+    },
+    {
+        "customer_id": "CUST-0000623",
+        "tier": "private",
+        "home_metro": "Minneapolis",
+        "risk_band": "critical",
+        "balance_at_risk_usd": 1167846,
+        "revenue_at_risk_usd": 29636
+    },
+    {
+        "customer_id": "CUST-0006284",
+        "tier": "affluent",
+        "home_metro": "San Francisco",
+        "risk_band": "critical",
+        "balance_at_risk_usd": 1153746,
+        "revenue_at_risk_usd": 29164
+    },
+    {
+        "customer_id": "CUST-0008393",
+        "tier": "affluent",
+        "home_metro": "Denver",
+        "risk_band": "critical",
+        "balance_at_risk_usd": 1149855,
+        "revenue_at_risk_usd": 29066
+    },
+    {
+        "customer_id": "CUST-0005618",
+        "tier": "affluent",
+        "home_metro": "New York",
+        "risk_band": "critical",
+        "balance_at_risk_usd": 1149513,
+        "revenue_at_risk_usd": 29378
+    }
+]

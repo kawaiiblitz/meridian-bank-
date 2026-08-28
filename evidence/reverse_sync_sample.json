@@ -1,0 +1,42 @@
+[
+  {
+    "_pg_change_type": "insert",
+    "_pg_lsn": "94447232",
+    "_pg_xid": "8285",
+    "_timestamp": "2026-08-28T13:45:54.688",
+    "customer_id": "CUST-0000214",
+    "action_type": "retention_offer",
+    "status": "executed",
+    "approved_by": "maria.garcia@meridianbank.com"
+  },
+  {
+    "_pg_change_type": "insert",
+    "_pg_lsn": "94621568",
+    "_pg_xid": "8403",
+    "_timestamp": "2026-08-28T14:06:36.800",
+    "customer_id": "CUST-0000214",
+    "action_type": "retention_offer",
+    "status": "proposed",
+    "approved_by": null
+  },
+  {
+    "_pg_change_type": "update_preimage",
+    "_pg_lsn": "94621888",
+    "_pg_xid": "8404",
+    "_timestamp": "2026-08-28T14:06:37.474",
+    "customer_id": "CUST-0000214",
+    "action_type": "retention_offer",
+    "status": "proposed",
+    "approved_by": null
+  },
+  {
+    "_pg_change_type": "update_postimage",
+    "_pg_lsn": "94621888",
+    "_pg_xid": "8404",
+    "_timestamp": "2026-08-28T14:06:37.474",
+    "customer_id": "CUST-0000214",
+    "action_type": "retention_offer",
+    "status": "approved",
+    "approved_by": "raquel.pena@databricks.com"
+  }
+]

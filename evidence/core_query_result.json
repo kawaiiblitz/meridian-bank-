@@ -1,0 +1,82 @@
+[
+    {
+        "customer_id": "CUST-0007505",
+        "tier": "affluent",
+        "home_metro": "Dallas",
+        "days_to_maturity": 9,
+        "balance_at_risk_usd": 1224857,
+        "revenue_at_risk_usd": 31141
+    },
+    {
+        "customer_id": "CUST-0001326",
+        "tier": "affluent",
+        "home_metro": "Chicago",
+        "days_to_maturity": 6,
+        "balance_at_risk_usd": 1180946,
+        "revenue_at_risk_usd": 30044
+    },
+    {
+        "customer_id": "CUST-0000623",
+        "tier": "private",
+        "home_metro": "Minneapolis",
+        "days_to_maturity": 1,
+        "balance_at_risk_usd": 1167846,
+        "revenue_at_risk_usd": 29636
+    },
+    {
+        "customer_id": "CUST-0005470",
+        "tier": "affluent",
+        "home_metro": "Boston",
+        "days_to_maturity": 7,
+        "balance_at_risk_usd": 1149249,
+        "revenue_at_risk_usd": 29331
+    },
+    {
+        "customer_id": "CUST-0001992",
+        "tier": "affluent",
+        "home_metro": "Dallas",
+        "days_to_maturity": 1,
+        "balance_at_risk_usd": 1142816,
+        "revenue_at_risk_usd": 29330
+    },
+    {
+        "customer_id": "CUST-0002251",
+        "tier": "private",
+        "home_metro": "Denver",
+        "days_to_maturity": 2,
+        "balance_at_risk_usd": 1142241,
+        "revenue_at_risk_usd": 29036
+    },
+    {
+        "customer_id": "CUST-0007172",
+        "tier": "affluent",
+        "home_metro": "Dallas",
+        "days_to_maturity": 3,
+        "balance_at_risk_usd": 1067883,
+        "revenue_at_risk_usd": 27057
+    },
+    {
+        "customer_id": "CUST-0007579",
+        "tier": "private",
+        "home_metro": "Chicago",
+        "days_to_maturity": 6,
+        "balance_at_risk_usd": 1033463,
+        "revenue_at_risk_usd": 26517
+    },
+    {
+        "customer_id": "CUST-0003472",
+        "tier": "affluent",
+        "home_metro": "Philadelphia",
+        "days_to_maturity": 1,
+        "balance_at_risk_usd": 1020257,
+        "revenue_at_risk_usd": 26186
+    },
+    {
+        "customer_id": "CUST-0007912",
+        "tier": "private",
+        "home_metro": "Seattle",
+        "days_to_maturity": 2,
+        "balance_at_risk_usd": 1019196,
+        "revenue_at_risk_usd": 26120
+    }
+]

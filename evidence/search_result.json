@@ -1,0 +1,32 @@
+[
+    {
+        "product_id": "PROD-INV-3001",
+        "description": "Managed wealth advisory account with a dedicated advisor. For affluent",
+        "vec_cosine_sim": 0.8476,
+        "fulltext_match": true
+    },
+    {
+        "product_id": "PROD-DEP-2011",
+        "description": "Money market account, tiered yield with limited monthly transactions. ",
+        "vec_cosine_sim": 0.7292,
+        "fulltext_match": false
+    },
+    {
+        "product_id": "PROD-INV-3002",
+        "description": "Self-directed online brokerage account. For customers who want to inve",
+        "vec_cosine_sim": 0.699,
+        "fulltext_match": false
+    },
+    {
+        "product_id": "PROD-CRD-4001",
+        "description": "Premium rewards credit card, travel + cashback perks. For mass-affluen",
+        "vec_cosine_sim": 0.6805,
+        "fulltext_match": false
+    },
+    {
+        "product_id": "PROD-DEP-2002",
+        "description": "Liquid high-yield savings account, tiered rate on higher balances. For",
+        "vec_cosine_sim": 0.68,
+        "fulltext_match": false
+    }
+]
